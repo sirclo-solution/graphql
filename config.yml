@@ -1,0 +1,1153 @@
+introspection: http://puripuri000.sirclo.me.dmmy.me/graphql
+servers:
+  - url: http://puripuri000.sirclo.me.dmmy.me/graphql
+    description: Test Server  
+info:
+  description: |
+    Welcome to SIRCLO Store Public API Documentation. This is a live example of how you can use [DociQL](https://github.com/wayfair/dociql) in conjunction with [GraphQL](http://puripuri000.sirclo.me.dmmy.me/graphql) to generate beautiful static documentation for your own APIs.
+
+    The SIRCLO API is GraphQL API. It's schema can be fetched using introspection query and can be used for generating code, documentations, tests etc.
+
+    GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
+  
+  version: 1.0.0
+  title: SIRCLO Store API
+  termsOfService: 'http://puripuri000.sirclo.me.dmmy.me/graphql'
+  contact:
+    email: irna@sirclo.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+
+domains:
+  - name: Fetch Tenant information
+    description: Base methods to fetch tenant information.
+    usecases:
+    - name: Fetch tenant 
+      description: Query tenant information with given id
+      query: query.tenant
+  - name: Fetch brands Information
+    description: This endpoint used to fetch brand 
+    usecases: 
+    - name: Fetch brand 
+      description: Qeury brands information
+      query: query.brands
+  - name: Fetch Orders Information
+    description: Base method to fetch Orders Information 
+    usecases: 
+    - name: Fetch Order
+      description: Query Single Order Information 
+      query: query.order 
+    - name: Fetch Orders
+      description: Query Orders Information 
+      query: query.orders
+    - name: Fetch Transaction
+      description: Query Order by given Transaction ID  
+      query: query.transaction
+  - name: Fetch Members Information
+    description: Base method to fetch members Information 
+    usecases: 
+    - name: Fetch Members 
+      description: Query members Information 
+      query: query.members
+  - name: Products 
+    description : Base method Products Information 
+    usecases: 
+    - name: Products
+      description: Query Products Information 
+      query: query.products
+    - name: Product Reviews
+      description: Query Product Reviews Information 
+      query: query.productReviews
+  - name : Article Information
+    description : Base method to fetch article Information 
+    usecases: 
+    - name: Fetch Article 
+      description: Query article Information 
+      query: query.articles
+  - name : Notification Information
+    description : Base method to fetch notification Information 
+    usecases: 
+    - name: Notification Templates
+      description: Query fetch templates related to notification service 
+      query: query.notificationTemplates
+    - name: Notification Templates V2
+      description: Query fetch templates related to notification service 
+      query: query.notificationTemplatesV2 
+    - name: Notification Event Variables
+      description: query event variables from eventType related to notification service
+      query: query.notificationEventVariables
+    - name: Notification Event Specs
+      description: query event event specifications related to notification service
+      query: query.notificationEventSpecs
+    - name: Notification Event Specs
+      description: query event event specifications related to notification service
+      query: query.notificationEventSpecs
+  - name : Fetch Coupons Information
+    description : Base method to fetch coupons Information 
+    usecases:
+    - name: Coupons Information
+      description: query coupons 
+      query: query.coupons
+  - name : lookbooks
+    description : Base method to fetch lookbook Information 
+    usecases:
+    - name: lookbooks Information
+      description: query lookbooks 
+      query: query.lookbooks
+  - name : Payment Providers
+    description : Base method to fetch Payment Provider Information 
+    usecases:
+    - name: payment Provider Information
+      description: query payment Provider 
+      query: query.paymentProviders
+  - name : Banner 
+    description : Base method banner Information 
+    usecases:
+    - name: banner Information
+      description: query banner
+      query: query.banners
+  - name : Fetch Discounts Information
+    description : Base method to fetch discount Information 
+    usecases: 
+    - name: Discount Information
+      description: Discount banner
+      query: query.discounts
+  - name : Fetch Navigation Information
+    description : Base method Navigantion Information 
+    usecases: 
+    - name: Navigation Information
+      description: Navigation banner
+      query: query.navigations
+  - name : Fetch Testimonial Information
+    description : Base method Testimonial Information 
+    usecases: 
+    - name: Testimonial Information
+      description: Testimonial 
+      query: query.testimonials 
+  - name : Fetch Widget Information
+    description : Base method Widget Information 
+    usecases: 
+    - name: Widget Information
+      description: Widget 
+      query: query.widget
+  - name: Shipping Information 
+    description : Base method shipping Information 
+    usecases: 
+    - name: Shipping Information
+      description: shipping 
+      query: query.shipping
+  - name: Billing Information 
+    description : Base method shipping Information 
+    usecases: 
+    - name: BIlling Information
+      description: billing 
+      query: query.billing
+  - name: Get List Allowed Action
+    description : Base method List Allowed Actions that can be done
+    usecases: 
+    - name: Allowed Actions
+      description: Query Get LIst Allowed Action 
+      query: query.allowedActions
+  - name: Admin of Profile 
+    description : Base method List of Admin Profile 
+    usecases: 
+    - name: Admin
+      description: Query Profile of an admin  
+      query: query.admin
+  - name: Actions  
+    description : Base method to query module actions 
+    usecases: 
+    - name: Actions
+      description: Query of module actions 
+      query: query.actions 
+  - name: Get Export File URL 
+    description : Base method to query get export file url  
+    usecases: 
+    - name: export File URL 
+      description: Query to get export file url 
+      query: query.exportFileURL
+  - name: Get Import Status 
+    description : Base method to query get import status  
+    usecases: 
+    - name: Import Status 
+      description: Query to get import status 
+      query: query.importStatus
+  - name: Get Exim History 
+    description : Base method to query get exim History 
+    usecases: 
+    - name: Exim History 
+      description: Query to get exim history  
+      query: query.eximHistory 
+  - name: News Letters 
+    description : Base method to get news letters information 
+    usecases: 
+    - name: News Letters
+      description: Query to get exim news letters  
+      query: query.newsletters
+  - name: Get Validate Setting
+    description : Base method to get validate setting  
+    usecases: 
+    - name: Validate Setting
+      description: Query to get validate Setting  
+      query: query.validateSetting
+  - name: Get Instagram Feeds
+    description : Base method to get instagram feeds  
+    usecases: 
+    - name: Instagram Feeds
+      description: Query to get instagram Feeds 
+      query: query.instagramFeeds
+  - name: Get List Documents
+    description : Base method to get List Documents   
+    usecases: 
+    - name: Documents
+      description: Query to get list Documents 
+      query: query.documents
+  - name: Check signer Identify
+    description : Base method to check signer identity   
+    usecases: 
+    - name: Identity 
+      description: Query to check signer identity 
+      query: query.identity
+  - name: List Tenant Exist 
+    description : Base method to check is tenant already exists    
+    usecases: 
+    - name: Is Tenant Exist 
+      description: Query to check if tenant already exists
+      query: query.isTenantExist 
+  - name: List Features
+    description : Base method to get list features   
+    usecases: 
+    - name: Features
+      description: Query to get list features
+      query: query.features
+  - name: Bootstrap Brand Task 
+    description : Base method to get status of brand bootstrapping process   
+    usecases: 
+    - name: Boostrap Brand Task 
+      description: Query to get the status of brand bootstrapping process
+      query: query.bootstrapBrandTask
+  - name: Shipment Tracking
+    description : Base method to get status of brand bootstrapping process   
+    usecases: 
+    - name: Boostrap Brand Task 
+      description: Query to get the status of brand bootstrapping process
+      query: query.bootstrapBrandTask
+  - name: Get Plan Actions
+    description : Base method to get plan actions 
+    usecases: 
+    - name: Plan Aactions 
+      description: Query to get plan actions
+      query: query.planActions 
+  - name: Get Escrows 
+    description : Base method to get escrow Activation Status 
+    usecases: 
+    - name: Escrows 
+      description: Query to get escrow activation status
+      query: query.escrows 
+  - name: Article Categories 
+    description : Base method to get article categories 
+    usecases: 
+    - name: Article Catgories
+      description: Query to get article categories
+      query: query.articleCategories
+  - name: Article Categories 
+    description : Base method to get article categories 
+    usecases: 
+    - name: Article Catgories
+      description: Query to get article categories
+      query: query.articleCategories
+  - name: Analytics Setting
+    description : Base method to get analytics Setting 
+    usecases: 
+    - name: Analytics Setting
+      description: Query to get analytics Setting
+      query: query.analyticsSetting
+  - name: List Buyer 
+    description : Base method to get list buyers
+    usecases: 
+    - name: Buyers
+      description: Query to get list buyers
+      query: query.buyers
+  - name: News Letter Setting
+    description : Base method to get news letter Setting
+    usecases: 
+    - name: news letter setting
+      description: Query to get list buyers
+      query: query.newsletterSetting
+  - name: Socmed Setting
+    description : Base method to get Socmed Setting
+    usecases: 
+    - name: Socmed Setting
+      description: Query to get Socmed Setting
+      query: query.socmedSetting
+  - name: Links Page
+    description : Base method to get Links Page
+    usecases: 
+    - name: Links Page
+      description: Query to get Links Page
+      query: query.linkspage
+  - name: Site Config 
+    description : Base method to get Site Config 
+    usecases: 
+    - name: Site Config 
+      description: Query to get Site Config
+      query: query.siteConfig
+  - name: Shipping Method
+    description : Base method to get shipping methods 
+    usecases: 
+    - name: Shipping Methods
+      description: Query to get Shipping Methods
+      query: query.shippingMethods
+  - name: Get Single Message
+    description : Base method to get single message 
+    usecases: 
+    - name: Message
+      description: Query to get Message
+      query: query.message
+  - name: Get Messages
+    description : Base method to get list messages
+    usecases: 
+    - name: Messages
+      description: Query to get list Messages
+      query: query.messages
+  - name: Seller
+    description : Base method to get seller
+    usecases: 
+    - name: Seller 
+      description: Query to get Seller
+      query: query.seller
+  - name: Search 
+    description : Base method to searc
+    usecases: 
+    - name: Search  
+      description: Query to Search 
+      query: query.search 
+  - name: Detect Text Intent
+    description : Base method detect Text Intent 
+    usecases: 
+    - name: Detect Text Intent 
+      description: Query to detect Text Intent  
+      query: query.detectTextIntent 
+  - name: Get Airwaybill 
+    description : Base method to get airwaybills
+    usecases: 
+    - name: Airwaybills
+      description: Query to get Airwaybills
+      query: query.airwaybills
+  - name: City Options
+    description : Base method to get city district Option 
+    usecases: 
+    - name: City Options
+      description: Query to city District Option 
+      query: query.cityOptions
+  - name: City District Option 
+    description : Base method to get city district Options
+    usecases: 
+    - name: City District Options
+      description: Query to city District Options
+      query: query.districtOptions
+  - name: List Cart
+    description : Base method to get cart
+    usecases: 
+    - name: Cart
+      description: Query to get list Cart 
+      query: query.cart
+  - name: Legacy Payment Methods
+    description : Base method to get legacy payment methods
+    usecases: 
+    - name: Legacy Payment Methods
+      description: Query to get legacy Payment Method
+      query: query.legacyPaymentMethods
+  - name: Upsert Member Account 
+    description : Base method to get member Accountc Upsert 
+    usecases: 
+    - name: Member Account Upsert 
+      description: Query to get member account upsert 
+      query: mutation.memberAccountUpsert
+  - name: Chat setting 
+    description : This endpoint operation chat Settings  
+    usecases: 
+    - name: Delete All Chat Setting 
+      description: mutation to delete chat settings
+      query: mutation.deleteAllChatSettings
+    - name: Set All Chat Setting 
+      description: mutation to set chat settings
+      query: mutation.setAllChatSettings
+  - name: Store Operation 
+    description : This endpoint to operate store in your store   
+    usecases: 
+    - name: Upsert Store Settings Input 
+      description: 
+      query: mutation.upsertStoreSettings
+  - name: Change Chatroom Status 
+    description: This endpoint used to change chat room status on your store 
+    usecases:
+    - name: Change chatroom status 
+      description: Mutation to Change Chatroom Status 
+      query: mutation.changeChatroomStatus 
+    - name: Upsert ChatRoom Attributes  
+      description: Mutation to Upsert Chatroom Attributes
+      query: mutation.upsertChatRoomAttributes
+  - name: Update Message Template
+    description: This endpoint used to upsert message template 
+    usecases:
+    - name: Upsert Message Template
+      description: Mutation to upsert message template
+      query: mutation.upsertMessageTemplate 
+    - name: Upsert Message Templates
+      description: Mutation to Upsert Message template 
+      query: mutation.upsertMessageTemplates 
+    - name: Send Message 
+      description: Mutation to send message
+      query: mutation.sendMessage 
+    - name: Delete Message Template
+      description: Mutation to delete message template
+      query: mutation.deleteMessageTemplate  
+  - name: Chat Queue 
+    description: This endpoint used to calin and close chat queue
+    usecases:
+    - name: Claim Chat Queue
+      description: Mutation to claim chat queue
+      query: mutation.claimChatQueue
+    - name: Close Chat Queue
+      description: Mutation to close chat queue
+      query: mutation.closeChatQueue
+  - name: Update Buyer Detail 
+    descriptions: This endpoint used to Update Buyer Detail 
+    usecases: 
+    - name: Update Buyer Detail 
+      description: Mutation for Update Buyer Detail 
+      query: mutation.updateBuyerDetail
+  - name: Chat Exchange Transaction ID  
+    descriptions: This endpoint used to Chat Exchange Transaction ID 
+    usecases: 
+    - name: Chat Exhange Transaction ID  
+      description: Mutation for Chat Exchange Transaction ID  
+      query: mutation.updateBuyerDetail 
+  - name: Publish Cart ID 
+    descriptions: This endpoint used to Publish Cart ID 
+    usecases: 
+    - name: Publish Cart ID  
+      description: Mutation for Publish Cart ID  
+      query: mutation.publishCartID
+  - name: Manage Orders 
+    description: This endpoint used to create and set order in your store
+    usecases: 
+    - name: Create Order 
+      description: Mutation to create order 
+      query: mutation.createOrder 
+    - name: Upsert Order
+      description: Mutation to Upsert Order 
+      query: mutation.upsertOrder 
+    - name: Create Order Store 
+      description: Base method to create Order Store 
+      query: mutation.createOrderStore 
+    - name: Create Order OMS 
+      description: Base method to create order OMS 
+      query: mutation.createOrderOMS 
+    - name: Update Order Status OMS 
+      description: Base method to update order status OMS 
+      query: mutation.updateOrderStatusOMS 
+    - name: Set Order Attributes 
+      description: Mutation to set Order Attributes  
+      query: mutation.setOrderAttributes 
+    - name: Set Order Billing 
+      description: Mutation to set Order Billing 
+      query: mutation.setOrderBilling
+    - name: Set Order Status As Accepted 
+      description: Mutation to Set Order Status As Accepted 
+      query: mutation.setOrderStatusAsAccepted
+    - name: Set Order Status As Cancelled
+      description: Mutation to Set Order Status As Cancelled 
+      query: mutation.setOrderStatusAsCanceled
+    - name: Set Order Status As Completed
+      description: Mutation to Set Order Status As Completed
+      query: mutation.setOrderStatusAsCompleted 
+    - name: Set Order Status As Ready To Ship 
+      description: Mutation to Set Order Status As Ready To Ship 
+      query: mutation.setOrderStatusAsReadyToShip 
+    - name: Set Order Status As Returned 
+      description: Mutation to Set Order Status As Returned 
+      query: mutation.setOrderStatusAsReturned 
+    - name: Set Order Status As Shipped 
+      description: Mutation to Set Order Status As Shipped 
+      query: mutation.setOrderStatusAsShipped
+  - name: Product Operations
+    description: This endpoint used to manage your product store 
+    usecases: 
+    - name: Create Product 
+      description: Mutation to create product  
+      query: mutation.createProduct 
+    - name: Upsert Product 
+      description: Mutation to Upsert Product 
+      query: mutation.upsertProduct 
+    - name: Delete Product 
+      description: Mutation to Delete Product 
+      query: mutation.deleteProducts
+    - name: Publish Products
+      description: Mutation to Publish Products 
+      query: mutation.publishProducts
+    - name: Unpublish Products 
+      description: Mutation to Unpublish Products 
+      query: mutation.unpublishProducts 
+    - name: Update Product Stock And Price
+      description: Mutation to update product stock and price  
+      query: mutation.updateProductStockAndPrice
+    - name: Export Products
+      description: Mutation to Export Products 
+      query: mutation.exportProducts
+  - name: Collection operation 
+    description: This endpoint used to delete collection
+    usecases: 
+    - name: Delete collection
+      description: Mutation to Delete collection  
+      query: mutation.deleteCollection
+    - name: Publish collections
+      description: Mutation to Publish collection
+      query: mutation.publishCollections
+    - name: Unpublish collections
+      description: Mutation to Unpublish collection
+      query: mutation.unpublishCollections
+    - name: Upsert Collection
+      description: Mutation to Upsert collection
+      query: mutation.upsertCollection 
+  - name: Set Variant Base Price 
+    description: This endpoint used to delete collection
+    usecases: 
+    - name: Set Variant Base Price
+      description: Mutation to set Variant Base Price  
+      query: mutation.setVariantBasePrice
+  - name: Password Operations
+    description: This endpoint used to manage your password 
+    usecases: 
+    - name: Change Password 
+      description: Mutation to change password   
+      query: mutation.changePassword
+    - name: Forgot Password 
+      description: Mutation to password password   
+      query: mutation.forgotPassword
+    - name: reset Password 
+      description: Mutation to reset password   
+      query: mutation.resetPassword
+  - name: Manage Member
+    description: This endpoint uset to manage your member account
+    usecases: 
+    - name: Upsert Member 
+      description: Mutation to upsert member    
+      query: mutation.upsertMember
+    - name: Upsert Member Address 
+      description: Mutation to upsert member address    
+      query: mutation.upsertMemberAddress
+    - name: Register Member 
+      description: Mutation to register new member  
+      query: mutation.registerMember
+  - name: Manage Account 
+    description: This endpoint used to manage Account 
+    usecases: 
+    - name: Activate Account 
+      description: Mutation to activate account 
+      query: mutation.activateAccount 
+    - name: Deactivate Account 
+      description: Mutation to deactivate an account  
+      query: mutation.deactivateAccount
+  - name: Manage Admin 
+    description: This endpoint to used manage admin on your store 
+    usecases: 
+    - name: Upsert Admin 
+      description: Mutation to upsert an admin for specific tenant 
+      query: mutation.upsertAdmin 
+    - name: Add Admin  
+      description: Mutation to creates account, admin profile and send email to reset password link for each admin 
+      query: mutation.addAdmin
+    - name: Update Admin 
+      description: Mutation to update admin 
+      query: mutation.updateAdmin
+    - name: Remove Admins
+      description: Mutation to remove admin 
+      query: mutation.removeAdmins
+    - name: Set Admins Actions  
+      description: Mutation to set admin actions 
+      query: mutation.setAdminActions
+  - name: Generate API Key 
+    description: This endpoint used to generate API Key for given Account 
+    usecases: 
+    - name: Generate API Key 
+      description: Mutation to Generate API Key for given account 
+      query: mutation.generateAPIKey  
+  - name: Create Authorization Code 
+    description: This endpoint used to create authorization Code 
+    usecases: 
+    - name: Create Authorization Code 
+      description: Mutation to create authorization Code  
+      query: mutation.createAuthorizationCode 
+  - name: Upsert Setting 
+    description: This endpoint used to upsert setting 
+    usecases: 
+    - name: Upsert Setting 
+      description: Mutation to upsert setting  
+      query: mutation.upsertSetting 
+  - name: Manage Warehouse 
+    description: This endpoint used to manage warehouse 
+    usecases: 
+    - name: Create Warehouse 
+      description: Mutation to create new warehouses
+      query: mutation.createWarehouse 
+    - name: Upsert Warehouse 
+      description: Mutation to upsert warehouses 
+      query: mutation.upsertWarehouse
+    - name: Set Warehouse as Default 
+      description: Mutation to set a warehouse as a default 
+      query: mutation.setWarehouseAsDefault 
+  - name: Manage Access Token 
+    description: This endpoint used to manage access token  
+    usecases: 
+    - name: Create Access Token 
+      description: Mutation to grant access token by user credentials or password grant 
+      query: mutation.createAccessToken 
+    - name: Remove Access Token 
+      description: Mutation to revoke access token 
+      query: mutation.removeAccessToken 
+  - name: Change Authorization Code 
+    description: This endpoint used to change authorization code into access token 
+    usecases: 
+    - name: Exchange Authorization Code 
+      description: Mutation to change authorization code into access token 
+      query: mutation.exchangeAuthorizationCode
+  - name: Manage Brands 
+    description: This endpoint used to manage brands on your store 
+    usecases: 
+    - name: Create Brand 
+      description: Mutation to create new barnd  
+      query: mutation.createBrand 
+    - name: Upsert Brand 
+      description: Mutation to upsert brand 
+      query: mutation.upsertBrand 
+    - name: Activate Brands 
+      description: Mutation to activate brands 
+      query: mutation.activateBrands 
+    - name: deactivate Brands 
+      description: Mutation to deactivate brands 
+      query: mutation.deactivateBrands
+    - name: Bootstrap Brand 
+      description: Mutation to bootstrap brands 
+      query: mutation.bootstrapBrand 
+  - name: Manage Payments 
+    description: This endpoint used to manage payment  
+    usecases: 
+    - name: Upsert Payment Admin Configs 
+      description: Mutation to upsert payment providers configuration   
+      query: mutation.upsertPaymentAdminConfigs 
+    - name: Upsert Payment Enumerated Admin Configs
+      description: Mutation to upsert payment config with strong typed configs 
+      query: mutation.upsertPaymentEnumeratedAdminConfigs
+    - name: Insert Payment Confirmation Image 
+      decsription: Base method to insert image in order to confirm payment made 
+      query: mutation.insertPaymentConfirmationImage
+    - name: Payment Confirmation 
+      description: Mutation to confirm payment for multiple orders 
+      query: mutation.paymentConfirmation 
+    - name: Set Payment Availability 
+      description: Mutation to upsert payment providers for brand 
+      query: mutation.setPaymentAvailability 
+    - name: Generate Payment Link 
+      description: Mutation to generate new payment link for specified payment providers 
+      query: mutation.generatePaymentLink 
+  - name: Manage Articles
+    description: This endpoint used to manage artricle on your store 
+    usecases: 
+    - name: Create Articles 
+      description: Mutation to create new articles
+      query: mutation.createArticles 
+    - name: Delete Articles 
+      description: Mutation to delete articles
+      query: mutation.deleteArticles
+    - name: Set Article Descriptions 
+      description: Mutation to upsert article's description 
+      query: mutation.setArticleDescriptions
+    - name: Set Article SEO's 
+      description: Mutation to upsert article's SEO 
+      query: mutation.setArticleSEOs 
+    - name: Upsert Articles 
+      description: Mutation to upsert articles
+      query: mutation.upsertArticles 
+    - name: Delete Article Categories  
+      description: Mutation to delete's article Categories 
+      query: mutation.deleteArticleCategories
+    - name: Upsert Article Categories  
+      description: Mutation to upsert article's Categories 
+      query: mutation.upsertArticleCategories
+  - name: Manage Shipping 
+    description: This endpoint used to manage shipping on your store 
+    usecases: 
+    - name: Upsert Shipping methods 
+      description: Mutation to upsert shipping methods  
+      query: mutation.upsertShippings
+    - name: Delete Shipping methods
+      description: Mutation to delete shipping methods
+      query: mutation.deleteShippings
+    - name: Set Shippings Status 
+      description: Mutation ro set activate or deactivate shipping methods 
+      query: mutation.setShippingsStatus 
+  - name: Manage Cart
+    description: This endpoint used to manage cart on your store   
+    usecases: 
+    - name: Save Cart 
+      description: Mutation to save current or update or update existing cart   
+      query: mutation.saveCart 
+    - name: Save Cart By Member ID 
+      description: Mutation to save current or update existing cart by memberID 
+      query: mutation.saveCartByMemberID 
+    - name: Upsert Cart Item 
+      description: Mutation to upsert Cart Item 
+      query: mutation.upsertCartItem 
+    - name: Clear Cart 
+      description: Mutation to clear Cart 
+      query: mutation.clearCart 
+  - name: Manage Discounts
+    description: This endpoint used to manage disconuts  
+    usecases: 
+    - name: Delete Discount 
+      description: Mutation to delete discount   
+      query: mutation.deleteDiscounts 
+    - name: Set Discounts As Active 
+      description: Mutation to set Discount As Active 
+      query: mutation.setDiscountsAsActive 
+    - name: Set Discount As In Active 
+      description: Mutation to set Discount as in active 
+      query: mutation.setDiscountsAsInactive 
+    - name: Set Discount Rows 
+      description: Mutation to set discount rows  
+      query: mutation.setDiscountRows 
+    - name: Upsert Discount  
+      description: Mutation to upsert Discounts
+      query: mutation.upsertDiscounts
+  - name: Manage Widgets 
+    description: This endpoint used to manage widgets  
+    usecases: 
+    - name: Upsert Widgets 
+      description: Mutation to upsert widgets    
+      query: mutation.upsertWidgets
+    - name: Create Widgets 
+      description: Mutation to create widgets
+      query: mutation.createWidgets
+    - name: Publish Widgets 
+      description: Mutation to publish widgets    
+      query: mutation.publishWidget
+    - name: Unpublish Widgets 
+      description: Mutation to unpublish widgets 
+      query: mutation.unpublishWidget
+    - name: Reorder Widget 
+      description: Reorder widget based on order of widget in input 
+      query: mutation.reorderWidget 
+    - name: Delete Widgets 
+      description: Mutation to delete widgets 
+      query: mutation.deleteWidgets 
+  - name: Manage Lookbooks 
+    description: This endpoint used to manage Lookbooks 
+    usecases: 
+    - name: Create Lookbooks 
+      description: Mutation to create Lookbooks 
+      query: mutation.createLookbooks 
+    - name: Upsert Lookbooks 
+      description: Mutation to upsert Lookbooks 
+      query: mutation.upsertLookbooks 
+    - name: Delete Lookbooks 
+      description: Mutation to delete lookbook images 
+      query: mutation.deleteLookbooks 
+    - name: Delete Lookbook Images 
+      description: Mutation to delete lookbook image URL's 
+      query: mutation.deleteLookbookImages 
+    - name: Set Lookbook Images 
+      description: Mutation to set lookbook Images 
+      query: mutation.setLookbookImages
+  - name: Manage Notifaction Templates V2 
+    description: This endpoint used to manage notification template V2 
+    usecases: 
+    - name: Upsert Notification Templates V2 
+      description: Base method to upsert templates related to notification V2 template 
+      query: mutation.upsertNotificationTemplatesV2 
+    - name: Create Notification Templates V2 
+      description: Base method to create notification templates V2 
+      query: mutation.createNotificationTemplatesV2 
+    - name: Activate Notification Templates V2 
+      description: Base method to activate Notification Templates V2 
+      query: mutation.activateNotificationTemplatesV2 
+    - name: Deactivate Notification Templates V2 
+      description: Base method to deactivate notification templates V2 
+      query: mutation.deactivateNotificationTemplatesV2 
+    - name: Delete Notification Templates V2 
+      description: Base method to delete notification templates V2 
+      query: mutation.deleteNotificationTemplatesV2 
+  - name: Manage Bundles 
+    description: This endpoint used to manage bundles 
+    usecases: 
+    - name: Upsert Buy n item bundle
+      description: Base method Upsert Buy n item get fixed price bundles 
+      query: mutation.upsertBuyNItemBundle 
+    - name: Upsert Buy Min Quantity Get Free Items bundle 
+      description: Base method to upsert buy minimum quantity get free products bundles 
+      query: mutation.upsertBuyMinQuantityGetFreeItemsBundle
+    - name: Upsert Buy Min Amount Get Free Items Bundle 
+      description: Base method to upsert buy min amount get free products bundles 
+      query: mutation.upsertBuyMinAmountGetFreeItemsBundle
+    - name: Delete Bundles 
+      description: Base method to delete bundles 
+      query: mutation.deleteBundles
+  - name : Manage Coupons 
+    description: This endpount used to manage coupons 
+    usecases: 
+    - name: Upsert Product Coupon 
+      descriprtion: Base method to upsert product coupon 
+      query: mutation.upsertProductCoupon 
+    - name: Upsert Cart Coupon 
+      description: Base method to upsert cart coupons 
+      query: mutation.upsertCartCoupon 
+    - name: Upsert Shipping Coupon 
+      description: Base method to upsert shipping coupon 
+      query: mutation.upsertShippingCoupon 
+    - name: Upsert Birthday Coupon 
+      description: Base method to upsert birthday coupon 
+      query: mutation.upsertBirthdayCoupon 
+    - name: Upsert New Member Coupons
+      description: Base method to upsert new member coupons 
+      query: mutation.upsertNewMemberCoupon 
+    - name: Delete Coupons 
+      description: Base Method to delete coupons 
+      query: mutation.deleteCoupons 
+    - name: Set Coupons As Active 
+      description: Base method to set coupons as active 
+      query: mutation.setCouponsAsActive 
+    - name: Set Coupons As Inactive 
+      description: Base method to set coupons as Inactive 
+      query: mutation.setCouponsAsInactive
+  - name: Import Excel 
+    description: This endpoint used to import excel file 
+    usecases: 
+    - name: Import Excel 
+      description: Base method to import excel file 
+      query: mutation.importExcel 
+  - name: Upload Document 
+    description: This endpoint used to upload Document 
+    usecases:
+    - name: Upload Document 
+      description: This endpoint used to upload document 
+      query: mutation.uploadDocument 
+  - name: Manage Navigations 
+    description: This endpoint used to manage navigation 
+    usecases: 
+    - name: Upsert Navigations 
+      description: Base method to upsert navigations 
+      query: mutation.upsertNavigations 
+    - name: Reorder Navigation 
+      description: Base method to reorder navigations based on order of navigations in input 
+      query: mutation.reorderNavigation
+    - name: Unpublish Navigations 
+      description: Base method to unpublish navigations 
+      query: mutation.unpublishNavigations
+    - name: Publish Navigations 
+      description: Base method to publish navigations 
+      query: mutation.publishNavigations 
+  - name: Manage Membership  
+    description: This endpoint used to manage membership
+    usecases: 
+    - name: Set Membership Model 
+      description: Base method to set membership model 
+      query: mutation.setMembershipModel 
+    - name: Set Membership Point 
+      description : Base method to set membership point
+      query: mutation.setMembershipPoint
+    - name: Add Membership Point 
+      description: Base method to add membership point 
+      query: mutation.addMembershipPoint 
+  - name: Manage Marketplaces 
+    description: This endpoint used to manage marketplaces on your store
+    usecases: 
+    - name: Integrate Marketplace
+      description: Base method to integrate with marketplaces
+      query: mutation.integrateMarketplace
+    - name: Reintegrate Marketplace 
+      description: Base method to reintegrate with marketplace
+      query: mutation.reintegrateMarketplace
+    - name: Disconnect Marketplace 
+      description: Base method to disconnect marketplace 
+      query: mutation.disconnectMarketplace
+    - name: Request Marketplace Integration 
+      description: Base method to request integration 
+      query: mutation.requestMarketplaceIntegration 
+  - name: Manage Testimonials  
+    description: This endpoint used to manage testimonials 
+    usecases: 
+    - name: Upsert Testimonials 
+      description: Base method to upsert testimonials 
+      query: mutation.upsertTestimonials 
+    - name: Create New Testimonials 
+      description: Base method to create new testimonials 
+      query: mutation.createTestimonials 
+    - name: Publish Testimonials 
+      description: Base method to publish testimonials 
+      query: mutation.publishTestimonials
+    - name: Unpublish Testimonials 
+      description: Base method to unpublish testimonials 
+      query: mutation.unpublishTestimonials
+    - name: Delete Testimonials 
+      description: Base method to delete testimonials 
+      query: mutation.deleteTestimonials
+    - name: Reorder Testimonials 
+      description: Base method to reorder testimonials 
+      query: mutation.unpublishTestimonials
+  - name: Manage Banners 
+    description: This endpoint used to manage banners 
+    usecases: 
+    - name: Upsert Banners 
+      description: Base method to upsert banners 
+      query: mutation.upsertBanners
+    - name: Publish Banners 
+      description: Base method to publish banners 
+      query: mutation.publishBanners
+    - name: Unpublish Banners 
+      description: Base method to unpublish banners 
+      query: mutation.unpublishBanners
+    - name: Reorder Banners 
+      description: Base method to reorder banner 
+      query: mutation.reorderBanner
+    - name: Delete Banners 
+      description: Base method to delete banner 
+      query: mutation.deleteBanners
+  - name: Create Enquiry 
+    description: This endpoint used to create enquiry  
+    usecases: 
+    - name: Create enquiry 
+      description: Base method to create enquiry  
+      query: mutation.createEnquiry
+  - name: Manage Newsletters  
+    description: This endpoint used to manage NewsLetters   
+    usecases: 
+    - name: Create Newletters 
+      description: Base method to create new newsletter   
+      query: mutation.createNewsletters
+    - name: Delete Newletters 
+      description: Base method to delete newsletter   
+      query: mutation.deleteNewsletters
+    - name: Export Newletters 
+      description: Base method to export list of newsletter   
+      query: mutation.exportNewsletters
+    - name: Upsert Newletters Settings  
+      description: Base method to upsert detail for newsletter setting 
+      query: mutation.upsertNewsletterSettings
+  - name: Upsert Socmed Setting 
+    description: This endpoint used to upsert socmed setting  
+    usecases: 
+    - name: Upsert Socmed Setting 
+      description: Base method to upsert socmed setting   
+      query: mutation.upsertSocmedSetting
+  - name: Manage Status of Orders
+    description: This endpoint used to manage status of orders  
+    usecases: 
+    - name: Accept Orders 
+      description: Base method to accept orders status     
+      query: mutation.acceptOrders 
+    - name: Cancel Orders 
+      description: Base method to cancel orders status 
+      query: mutation.cancelOrders 
+    - name: Complete Orders 
+      description: Base method to complete orders status 
+      query: mutation.completeOrders 
+    - name: Set Status As Ready To Ship 
+      description: Base method to set status as ready to ship 
+      query: mutation.setStatusAsReadyToShip
+    - name: Ship Orders  
+      description: Base method to ship Orders 
+      query: mutation.shipOrders 
+    - name: Set Order Delivery 
+      description: Base method to upsert order's delivery address  
+      query: mutation.setOrderDelivery 
+    - name: Set Order Line Items  
+      description: Base method to upsert order's line items  
+      query: mutation.setOrderLineItems
+    - name: Set Order Shipping  
+      description: Base method to upsert order's shipping method
+      query: mutation.setOrderShipping 
+    - name: Set Oder Payment 
+      description: Base method to be deprecated upsert order's payment method 
+      query: mutation.setOrderPayment 
+    - name: Set Orchestrator Payment   
+      description: Base method to set Order Orchestrator 
+      query: mutation.setOrchestratorPayment
+  - name: Manage Analytics 
+    description: This endpoint used to manage analytics  
+    usecases: 
+    - name: Upsert Analytics  
+      description: Base method to upsert analytics   
+      query: mutation.upsertAnalytics 
+    - name: Upsert Analytic Setting  
+      description: Base method to upsert analytics setting 
+      query: mutation.upsertAnalyticsSetting 
+  - name: Manage Login By User Id Token 
+    description: This endpoint used to manage login by id token 
+    usecases: 
+    - name: Admin Login By Id Token 
+      description: Base method to admin login by user Id Token    
+      query: mutation.memberLoginByIdToken 
+    - name: Member Login By Id Token 
+      description: Base method to login by user Id Token 
+      query: mutation.memberLoginByIdToken
+  - name: Manage Google Account 
+    description: This endpoint used to manage Google Account 
+    usecases: 
+    - name: Link Google Merchant Account  
+      description: Base method to link google merchant account   
+      query: mutation.linkGoogleMerchantAccount
+    - name: Unlink Google Merchant Account  
+      description: Base method to unlink google merchant account   
+      query: mutation.unlinkGoogleMerchantAccount
+    - name: Link Google Ads Account  
+      description: Base method to link google ads account   
+      query: mutation.linkGoogleAdsAccount
+    - name: Unlink Google Ads Account  
+      description: Base method to unlink google ads account   
+      query: mutation.unlinkGoogleAdsAccount
+    - name: Claim Google Merchant Website  
+      description: Base method to claim google merchant website  
+      query: mutation.claimGoogleMerchantWebsite
+    - name: Upsert Google Ads Campaign  
+      description: Base method to create google ads campaign  
+      query: mutation.upsertGoogleAdsCampaign 
+    - name: Remove Google Account   
+      description: Base method to remove google account    
+      query: mutation.removeGoogleAccount
+  - name: Add Stock Reminder Customer  
+    description: This endpoint used to add stock reminder customer 
+    usecases: 
+    - name: Add Stock Reminder Customer 
+      description: Base method to add stock reminder customer    
+      query: mutation.addStockReminderCustomer 
+  - name: Upsert Links Page 
+    description: This endpoint used to upsert link page 
+    usecases: 
+    - name: Upsert Links Page
+      description: Base method to upsert links page    
+      query: mutation.upsertLinkspage
+  - name: Manage Product Review 
+    description: This endpoint used to manage product review 
+    usecases: 
+    - name: Upsert Prodyct Review 
+      description: Base method to upsert product review   
+      query: mutation.upsertProductReview
+    - name: Upsert Prodyct Review 
+      description: Base method to upsert product review for admin  
+      query: mutation.upsertProductReview
+    - name: Submit Product Review By Customer
+      description: Base method to submit product review for customer 
+      query: mutation.submitProductReviewByCustomer
+    - name: Update Product Review Status
+      description: Base method to update product review status 
+      query: mutation.updateProductReviewStatus
+  - name: Set Escrow Activation Status 
+    description: This endpoint used to set escrow status as active  
+    usecases: 
+    - name: Set Escrow Activation Status 
+      description: Base method to activate status of escrow   
+      query: mutation.setEscrowActivationStatus
+  - name: Place Order 
+    description: This endpoint used to update place order 
+    usecases: 
+    - name: Place Order 
+      description: Base method to place order   
+      query: mutation.placeOrder 
+  - name: Update Business Hours
+    description: This endpoint used to update business hours  
+    usecases: 
+    - name: Update Business Hours
+      description: Base method to update business hours 
+      query: mutation.updateBusinessHours 
+  - name: Manage Decision 
+    description: This endpoint used to manage decision  
+    usecases: 
+    - name: Update Decision Menu 
+      description: Base method to update decision menu   
+      query: mutation.updateDecisionMenu 
+    - name: Create Decision Menu 
+      description: Base method to create decision menu   
+      query: mutation.createDecisionMenu
+  - name: Manage Upload URL 
+    description: This endpoint used to manage URL 
+    usecases: 
+    - name: Get Signed URL 
+      description: Base method to get Signed URL    
+      query: mutation.getSignedUrl
+    - name: Single Upload 
+      description: Base method to single updload 
+      query: mutation.singleUpload 
+    - name: Single Upload from URL 
+      description: Base method to single upload from URL 
+      query: mutation.singleUploadFromURL
+  - name: Manage Bank Account 
+    description: This endpoint used to manage Bank Account  
+    usecases: 
+    - name: Create Bank Account 
+      description: Base method to create new bank acconut     
+      query: mutation.createBankAccount 
+    - name: Upsert Bank Account 
+      description: Base method to upsert bank account  
+      query: mutation.upsertBankAccount 
+    - name: Delete Bank Account 
+      description: Base method to delete bank account  
+      query: mutation.deleteBankAccount 
+  - name: Subscriptions 
+    description: This endpoint used to manage subscriptions
+    usecases: 
+    - name: notification
+      description: Base method of subscription notification     
+      query: query.notification 
+    - name: Message 
+      description: Base method of subscription message  
+      query: query.message 
+    - name: Chat Queue  
+      description: Base method chat queue in subscription 
+      query: query.chatQueue
+    - name: Profile Update Status 
+      description: Base method to update profile status of subscriptions
+      query: mutation.profileUpdateStatus 
+    - name: cartID 
+      description: Base method of cart ID 
+      query: mutation.cartID 
+    
+
+ 
+
+
+    
+
+  
+    
+    
+    
+    
+    
+   
+  
+    
+  
+    
+    
+    
+
+    
+# securityDefinitions:
+#   cheesy_auth:
+#     type: oauth2
+#     authorizationUrl: 'http://cheesy.sourcey.com/api/oauth/dialog'
+#     description: Provides OAuth access to the cheese
+#     flow: implicit
+#     scopes:
+#       'write:cheeses': Modify cheeses in your account
+#       'read:cheeses': Read your cheeses
+#   api_key:
+#     type: apiKey
+#     name: api_key
+#     description: Provides API Key access to the cheese
+#     in: header
+# externalDocs:
+#   description: Find out more about Swagger
+#   url: 'http://swagger.io'
