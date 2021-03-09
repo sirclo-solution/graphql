@@ -50,7 +50,7 @@ domains:
     - name: Fetch Members 
       description: Query members Information 
       query: query.members
-  - name: Products 
+  - name: Fetch Products Information
     description : Base method Products Information 
     usecases: 
     - name: Products
@@ -59,7 +59,7 @@ domains:
     - name: Product Reviews
       description: Query Product Reviews Information 
       query: query.productReviews
-  - name : Article Information
+  - name : Fetch Article Information
     description : Base method to fetch article Information 
     usecases: 
     - name: Fetch Article 
@@ -1094,24 +1094,7 @@ domains:
     - name: Delete Bank Account 
       description: Base method to delete bank account  
       query: mutation.deleteBankAccount 
-  - name: Subscriptions 
-    description: This endpoint used to manage subscriptions
-    usecases: 
-    - name: notification
-      description: Base method of subscription notification     
-      query: query.notification 
-    - name: Message 
-      description: Base method of subscription message  
-      query: query.message 
-    - name: Chat Queue  
-      description: Base method chat queue in subscription 
-      query: query.chatQueue
-    - name: Profile Update Status 
-      description: Base method to update profile status of subscriptions
-      query: mutation.profileUpdateStatus 
-    - name: cartID 
-      description: Base method of cart ID 
-      query: mutation.cartID 
+ 
     
 
  
