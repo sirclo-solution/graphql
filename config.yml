@@ -8,7 +8,7 @@ info:
 
     The SIRCLO Store Public API is GraphQL API. It's schema can be fetched using introspection query, you can test the queries and mutations with click [Try it now](http://puripuri000.sirclo.me.dmmy.me/graphql).
 
-    The GraphQL endpoints able to access publicly for accessible information such as those publicly for displayed on websites (e.g., product catalog, navigation, banner) and using authentication for mutations and private information. 
+    The GraphQL endpoints able to access publicly for accessible information such as those publicly for displayed on websites (e.g., product catalog, navigation, banner) and using  <a href="#authentication">Authentication</a> for mutations and private information. 
   
   version: 1.0.0
   title: SIRCLO Store Public API V2
@@ -1112,13 +1112,62 @@ securityDefinitions:
 #        'read:cheeses': Read your cheeses
     api_key:
       type: apiKey
-      name: Api Key Authentication
-      URL : https://accounts.sirclo.id/token
-      description: This endpoint is used to authenticate an API key pair. The pair can be retrieved from admin profile, API key section. 
-      
-        [auth](/img/auth.png "Logo Title Text 1")
+      name: API Key Authentication
+      description: |
+        API Key url : `https://accounts.sirclo.id/token`
+        
+        This endpoint is used to authenticate an API key pair. The pair can be retrieved from admin profile, API key section. 
 
+        However, this key pair is not usable at this moment, you have to retrieve an access token from this endpoint using the following request:
+        
+        ```curl 
+        --location --request POST 'https://accounts.sirclo.id/token' \
+        --header 'Authorization: Basic NjNFMHdPbDVmaTkyNU9WejdzVHAwWlJUQlV3VkpiSEM6Qm42TDNwVnpkYzZnQ0tWYXNmMXZ2VzNLSUEzdmE4cVI2Qks5WDBKVlNCNXBzWm1VTzBRaFVWTWNyN2sxZEZkMA==' \
+        --form 'grant_type="client_credentials"'
+        ```
+
+        The authorization header is computed by taking the base64 representation of “{client_id}:{client_secret}”. The request will return an access token that can be used to query our GraphQL .
+        
+        ```json
+        {
+          "access_token": "Y494ZIggwIaIHPNDP_ShgUltIj-eziIXt-WpWvGL7vs.paI-A_R0H0KGZIjLEl6niro2vE5Zvyq0H1_H-A-mu6c",
+          "expires_in": 86399,
+          "scope": "",
+          "token_type": "bearer"
+        }
+        ```
+        > Note: That the access token only valid for 24 hours, you have to get a new access token to continue using our GraphQL
     
+    Invalid Token: 
+      description: | 
+        url: `https://accounts.sirclo.id/logout`
+
+        This endpoint is used to invalidate a token that is no longer used.
+
+        ```curl 
+        --location --request POST 'https://accounts.sirclo.id/logout' \
+        --header 'Authorization: Basic NjNFMHdPbDVmaTkyNU9WejdzVHAwWlJUQlV3VkpiSEM6Qm42TDNwVnpkYzZnQ0tWYXNmMXZ2VzNLSUEzdmE4cVI2Qks5WDBKVlNCNXBzWm1VTzBRaFVWTWNyN2sxZEZkMA==' \
+        --header 'Content-Type: application/x-www-form-urlencoded' \
+        --data-urlencode 'token=Y494ZIggwIaIHPNDP_ShgUltIj-eziIXt-WpWvGL7vs.paI-A_R0H0KGZIjLEl6niro2vE5Zvyq0H1_H-A-mu6c' \
+        --data-urlencode 'token_type=bearer'
+        ```
+        The authorization header is computed by taking the base64 representation of “{client_id}:{client_secret}”. And the token body is the token you wish to invalidate.
+
+    Introspect:
+      description: |
+        url: `https://accounts.sirclo.id/introspect`
+
+        This endpoint is used to introspect a token
+
+        ```curl 
+        --location --request POST 'https://accounts.sirclo.id/introspect' \
+        --header 'Content-Type: application/x-www-form-urlencoded' \
+        --data-urlencode 'token=Am49L8A92_9868mgN7y7WZsO0x9QafKXYtqgJW5fPqw.vY9CFUjyn2z5GQY3cVCRtoo-2YTVPV65CPsQRwOjE-8'
+        ```
+    Currently Internal use only:
+      description: |
+        `Login admin`
+
 # externalDocs:
 #   description: Find out more about Swagger
 #   url: 'http://swagger.io'
