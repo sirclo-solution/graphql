@@ -1101,20 +1101,24 @@ domains:
       description: Base method to delete bank account  
       query: mutation.deleteBankAccount
 
-# securityDefinitions:
-#   cheesy_auth:
+securityDefinitions:
+#   sirclostore_auth:
 #     type: oauth2
 #     authorizationUrl: 'http://cheesy.sourcey.com/api/oauth/dialog'
 #     description: Provides OAuth access to the cheese
 #     flow: implicit
-#     scopes:
-#       'write:cheeses': Modify cheeses in your account
-#       'read:cheeses': Read your cheeses
-#   api_key:
-#     type: apiKey
-#     name: api_key
-#     description: Provides API Key access to the cheese
-#     in: header
+#       scopes:
+#        'write:cheeses': Modify cheeses in your account
+#        'read:cheeses': Read your cheeses
+    api_key:
+      type: apiKey
+      name: Api Key Authentication
+      URL : https://accounts.sirclo.id/token
+      description: This endpoint is used to authenticate an API key pair. The pair can be retrieved from admin profile, API key section. 
+      
+        [auth](/img/auth.png "Logo Title Text 1")
+
+    
 # externalDocs:
 #   description: Find out more about Swagger
 #   url: 'http://swagger.io'
