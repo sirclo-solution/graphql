@@ -4,14 +4,14 @@ servers:
     description: Test Server  
 info:
   description: |
-    Welcome to SIRCLO Store Public API Documentation. This is a live example of how you can use [DociQL](https://github.com/wayfair/dociql) in conjunction with [GraphQL](http://puripuri000.sirclo.me.dmmy.me/graphql) to generate beautiful static documentation for your own APIs.
+    Welcome to SIRCLO Store Public API v2 Documentation. This is a Graphql Public API for your store v2 website, You can used this graphQL API to connect to SIRCLO Store Platform. 
 
-    The SIRCLO API is GraphQL API. It's schema can be fetched using introspection query and can be used for generating code, documentations, tests etc.
+    The SIRCLO Store Public API is GraphQL API. It's schema can be fetched using introspection query, you can test the queries and mutations with click [Try it now](http://puripuri000.sirclo.me.dmmy.me/graphql).
 
-    GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.
+    The GraphQL endpoints able to access publicly for accessible information such as those publicly for displayed on websites (e.g., product catalog, navigation, banner) and using authentication for mutations and private information. 
   
   version: 1.0.0
-  title: SIRCLO Store API
+  title: SIRCLO Store Public API V2
   termsOfService: 'http://puripuri000.sirclo.me.dmmy.me/graphql'
   contact:
     email: irna@sirclo.com
@@ -20,6 +20,12 @@ info:
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 
 domains:
+  - name: Get Access Token 
+    description: This endpoint used to get accesstoken token to allow an application to access an API
+    usecases: 
+    - name: Access Token 
+      description: Base method to query account by access tooken 
+      query: query.accessToken 
   - name: Fetch Tenant information
     description: Base methods to fetch tenant information.
     usecases:
@@ -1093,30 +1099,8 @@ domains:
       query: mutation.upsertBankAccount 
     - name: Delete Bank Account 
       description: Base method to delete bank account  
-      query: mutation.deleteBankAccount 
- 
-    
+      query: mutation.deleteBankAccount
 
- 
-
-
-    
-
-  
-    
-    
-    
-    
-    
-   
-  
-    
-  
-    
-    
-    
-
-    
 # securityDefinitions:
 #   cheesy_auth:
 #     type: oauth2
