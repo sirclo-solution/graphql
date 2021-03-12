@@ -1110,7 +1110,7 @@ securityDefinitions:
         
         This endpoint is used to authenticate an API key pair. The pair can be retrieved from admin profile, API key section. 
 
-        ![](img/auth.jpg)
+        ![test](https://github.com/sirclo-solution/graphql/blob/main/img/auth.jpg?raw=true)
 
         However, this key pair is not usable at this moment, you have to retrieve an access token from this endpoint using the following request:
         
