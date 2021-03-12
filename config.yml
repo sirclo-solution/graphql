@@ -95,19 +95,19 @@ domains:
     - name: Coupons Information
       description: query coupons 
       query: query.coupons
-  - name : lookbooks
+  - name : Fetch lookbooks Information
     description : Base method to fetch lookbook Information 
     usecases:
     - name: lookbooks Information
       description: query lookbooks 
       query: query.lookbooks
-  - name : Payment Providers
+  - name : Fetch Payment Providers
     description : Base method to fetch Payment Provider Information 
     usecases:
     - name: payment Provider Information
       description: query payment Provider 
       query: query.paymentProviders
-  - name : Banner 
+  - name : Fetch Banner Information 
     description : Base method banner Information 
     usecases:
     - name: banner Information
@@ -1102,14 +1102,6 @@ domains:
       query: mutation.deleteBankAccount
 
 securityDefinitions:
-#   sirclostore_auth:
-#     type: oauth2
-#     authorizationUrl: 'http://cheesy.sourcey.com/api/oauth/dialog'
-#     description: Provides OAuth access to the cheese
-#     flow: implicit
-#       scopes:
-#        'write:cheeses': Modify cheeses in your account
-#        'read:cheeses': Read your cheeses
     api_key:
       type: apiKey
       name: API Key Authentication
@@ -1117,6 +1109,8 @@ securityDefinitions:
         API Key url : `https://accounts.sirclo.id/token`
         
         This endpoint is used to authenticate an API key pair. The pair can be retrieved from admin profile, API key section. 
+
+        ![](img/auth.jpg)
 
         However, this key pair is not usable at this moment, you have to retrieve an access token from this endpoint using the following request:
         
@@ -1168,6 +1162,15 @@ securityDefinitions:
       description: |
         `Login admin`
 
+#   sirclostore_auth:
+#     type: oauth2
+#     authorizationUrl: 'http://cheesy.sourcey.com/api/oauth/dialog'
+#     description: Provides OAuth access to the cheese
+#     flow: implicit
+#       scopes:
+#        'write:cheeses': Modify cheeses in your account
+#        'read:cheeses': Read your cheeses
 # externalDocs:
 #   description: Find out more about Swagger
 #   url: 'http://swagger.io'
+
