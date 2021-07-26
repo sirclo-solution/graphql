@@ -1,2 +1,3 @@
 # graphql
-SIRCLO Store Public API Documentation 
+SIRCLO Store
+Public API Documentation
